@@ -37,15 +37,7 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxxhdpi-3072-dal
 # call hwui memory config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxxhdpi-3072-hwui-memory.mk)
 
-
-PRODUCT_PACKAGES += \
-    keystore.msm8974
-
-PRODUCT_PACKAGES += \
-    power.msm8974
     
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=480
 
-# Inherit from msm8974-common
-$(call inherit-product, device/oppo/msm8974-common/msm8974.mk)
