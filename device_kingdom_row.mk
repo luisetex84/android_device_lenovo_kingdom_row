@@ -45,6 +45,44 @@ PRODUCT_PACKAGES += \
     libqdutils \
     libqdMetaData
     
+PRODUCT_PACKAGES += \
+    libc2dcolorconvert \
+    libstagefrighthw \
+    libOmxCore \
+    libmm-omxcore \
+    libOmxVdec \
+    libOmxVdecHevc \
+    libOmxVenc
+
+PRODUCT_PACKAGES += \
+    audio.primary.msm8974 \
+    audio.a2dp.default \
+    audio.usb.default \
+    audio.r_submix.default \
+    libaudio-resampler \
+    tinymix
+
+# Audio effects
+PRODUCT_PACKAGES += \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libqcomvoiceprocessingdescriptors \
+    libqcompostprocbundle
+    
+PRODUCT_PACKAGES += \
+    libqomx_core \
+    libmmcamera_interface \
+    libmmjpeg_interface \
+    camera.hammerhead \
+    mm-jpeg-interface-test \
+    mm-qcamera-app
+
+PRODUCT_PACKAGES += \
+    keystore.msm8974
+
+PRODUCT_PACKAGES += \
+    power.msm8974
+    
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=480
 
