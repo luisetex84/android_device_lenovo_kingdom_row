@@ -11,9 +11,14 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := cortex-a7
 TARGET_CPU_SMP := true
+TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
 TARGET_BOOTLOADER_BOARD_NAME := kingdom_row
+
+# Platform
+TARGET_BOARD_PLATFORM := msm8974
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
 
 BOARD_KERNEL_CMDLINE := console=tty60,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3b7 ehci-hcd.park=3 vmalloc=480M androidboot.bootdevice=msm_sdcc.1
 BOARD_KERNEL_BASE := 0x00000000
@@ -35,4 +40,6 @@ TARGET_PREBUILT_KERNEL := device/lenovo/kingdom_row/kernel
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 USE_OPENGL_RENDERER := true
+
+
 
