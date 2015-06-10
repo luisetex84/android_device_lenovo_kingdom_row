@@ -38,11 +38,11 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxxhdpi-3072-dal
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxxhdpi-3072-hwui-memory.mk)
 
 PRODUCT_PACKAGES += \
-    gralloc.msm8974 \
     libgenlock \
     hwcomposer.msm8974 \
     memtrack.msm8974 \
     libqdMetaData
+#    gralloc.msm8974
 #    libqdutils
 
 PRODUCT_PACKAGES += \
