@@ -37,10 +37,7 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxxhdpi-3072-dal
 # call hwui memory config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxxhdpi-3072-hwui-memory.mk)
 
-PRODUCT_PACKAGES += \
-    hwcomposer.msm8974
 
-    
 PRODUCT_PACKAGES += \
     keystore.msm8974
 
