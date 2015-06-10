@@ -42,9 +42,9 @@ PRODUCT_PACKAGES += \
     libgenlock \
     hwcomposer.msm8974 \
     memtrack.msm8974 \
-#    libqdutils
     libqdMetaData
-    
+#    libqdutils
+
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libstagefrighthw \
