@@ -41,33 +41,7 @@ PRODUCT_PACKAGES += \
     libgenlock \
     hwcomposer.msm8974 \
     memtrack.msm8974 \
-    libqdMetaData
-#    gralloc.msm8974
-#    libqdutils
 
-PRODUCT_PACKAGES += \
-    libc2dcolorconvert \
-    libstagefrighthw \
-    libOmxCore \
-    libmm-omxcore \
-    libOmxVdec \
-    libOmxVdecHevc \
-    libOmxVenc
-
-PRODUCT_PACKAGES += \
-    audio.primary.msm8974 \
-    audio.a2dp.default \
-    audio.usb.default \
-    audio.r_submix.default \
-    libaudio-resampler \
-    tinymix
-
-# Audio effects
-PRODUCT_PACKAGES += \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libqcomvoiceprocessingdescriptors \
-    libqcompostprocbundle
     
 PRODUCT_PACKAGES += \
     keystore.msm8974
