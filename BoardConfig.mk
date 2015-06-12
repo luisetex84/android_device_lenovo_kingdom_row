@@ -1,10 +1,5 @@
 USE_CAMERA_STUB := true
 
-# inherit from the proprietary version
--include vendor/lenovo/kingdom_row/BoardConfigVendor.mk
--include device/qcom/common/Android.mk
--include device/oppo/msm8974-common/BoardConfigCommon.mk
-
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := unknown
@@ -39,6 +34,9 @@ TARGET_PREBUILT_KERNEL := device/lenovo/kingdom_row/kernel
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 
-
+# inherit from the proprietary version
+-include vendor/lenovo/kingdom_row/BoardConfigVendor.mk
+-include device/qcom/common/Android.mk
+-include device/oppo/msm8974-common/BoardConfigCommon.mk
 
 
