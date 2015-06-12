@@ -47,45 +47,8 @@ PRODUCT_COPY_FILES += \
     device/lenovo/kingdom_row/rootdir/init.qcom.rc:root/init.qcom.rc \
     device/lenovo/kingdom_row/rootdir/fstab.qcom:root/fstab.qcom
 
-PRODUCT_PACKAGES += \
-    gralloc.msm8974 \
-    libgenlock \
-    hwcomposer.msm8974 \
-    memtrack.msm8974 \
-    libqdutils \
-    libqdMetaData
-    
-PRODUCT_PACKAGES += \
-    libc2dcolorconvert \
-    libOmxCore \
-    libmm-omxcore \
-    libOmxVdec \
-    libOmxVdecHevc \
-    libOmxVenc
-#    libstagefrighthw
-
-PRODUCT_PACKAGES += \
-    audio.primary.msm8974 \
-    audio.a2dp.default \
-    audio.usb.default \
-    audio.r_submix.default \
-    libaudio-resampler \
-    tinymix
-    
-PRODUCT_PACKAGES += \
-    libqomx_core \
-    libmmcamera_interface \
-    libmmjpeg_interface \
-    camera.hammerhead \
-    mm-jpeg-interface-test \
-    mm-qcamera-app
-
-PRODUCT_PACKAGES += \
-    keystore.msm8974
-
-PRODUCT_PACKAGES += \
-    power.msm8974
-    
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=480
 
+# Inherit from msm8974-common
+$(call inherit-product, device/oppo/msm8974-common/msm8974.mk)
