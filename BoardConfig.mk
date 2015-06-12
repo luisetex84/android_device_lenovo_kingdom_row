@@ -18,19 +18,6 @@ TARGET_BOOTLOADER_BOARD_NAME := kingdom_row
 
 PRODUCT_PREBUILT_WEBVIEWCHROMIUM := no
 
-# QCOM hardware
-BOARD_USES_QCOM_HARDWARE := true
-TARGET_QCOM_AUDIO_VARIANT := caf
-TARGET_QCOM_DISPLAY_VARIANT := caf
-TARGET_QCOM_MEDIA_VARIANT := caf
-
-BOARD_USES_ALSA_AUDIO := true
-BOARD_USES_LEGACY_ALSA_AUDIO := false
-
-# Platform
-TARGET_BOARD_PLATFORM := msm8974
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
-
 BOARD_KERNEL_CMDLINE := console=tty60,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3b7 ehci-hcd.park=3 vmalloc=480M androidboot.bootdevice=msm_sdcc.1
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -51,7 +38,6 @@ TARGET_PREBUILT_KERNEL := device/lenovo/kingdom_row/kernel
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 
-USE_OPENGL_RENDERER := true
 
 
 
