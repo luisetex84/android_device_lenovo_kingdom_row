@@ -40,9 +40,9 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxxhdpi-3072-hwu
 # Ramdisk
 PRODUCT_COPY_FILES += \
     device/lenovo/kingdom_row/rootdir/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
-    $(COMMON_PATH)/rootdir/init.qcom.sh:root/init.qcom.sh \
-    $(COMMON_PATH)/rootdir/init.qcom.rc:root/init.qcom.rc \
-    $(COMMON_PATH)/rootdir/fstab.qcom:root/fstab.qcom
+    device/lenovo/kingdom_row/rootdir/init.qcom.sh:root/init.qcom.sh \
+    device/lenovo/kingdom_row/rootdir/init.qcom.rc:root/init.qcom.rc \
+    device/lenovo/kingdom_row/rootdir/fstab.qcom:root/fstab.qcom
 
 PRODUCT_PACKAGES += \
     gralloc.msm8974 \
