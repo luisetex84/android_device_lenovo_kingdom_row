@@ -31,8 +31,8 @@ TARGET_SCREEN_WIDTH := 1440
 PRODUCT_CHARACTERISTICS := nosdcard
 
 # Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi xxxhdpi
-PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
+PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # call dalvik heap config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxxhdpi-3072-dalvik-heap.mk)
