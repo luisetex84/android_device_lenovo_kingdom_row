@@ -44,6 +44,27 @@ BOARD_USES_ALSA_AUDIO := true
 AUDIO_FEATURE_ENABLED_HWDEP_CAL := true
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
 
+# Bluetooth
+BOARD_HAVE_BLUETOOTH := true
+
+# Display
+BOARD_EGL_CFG := $(LOCAL_PATH)/configs/egl.cfg
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+TARGET_USES_ION := true
+USE_OPENGL_RENDERER := true
+
+MAX_EGL_CACHE_KEY_SIZE := 12*1024
+MAX_EGL_CACHE_SIZE := 2048*1024
+
+HAVE_ADRENO_SOURCE := false
+OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+
+# Power
+TARGET_POWERHAL_VARIANT := qcom
+
+# Qualcomm support
+BOARD_USES_QCOM_HARDWARE := true
+
 # inherit from the proprietary version
 -include vendor/lenovo/kingdom_row/BoardConfigVendor.mk
 
