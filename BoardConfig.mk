@@ -48,7 +48,7 @@ AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
 BOARD_HAVE_BLUETOOTH := true
 
 # Display
-BOARD_EGL_CFG := $(LOCAL_PATH)/configs/egl.cfg
+BOARD_EGL_CFG := device/lenovo/kingdom_row/configs/egl.cfg
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_USES_ION := true
 USE_OPENGL_RENDERER := true
