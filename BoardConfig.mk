@@ -64,6 +64,9 @@ TARGET_POWERHAL_VARIANT := qcom
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
+TARGET_QCOM_AUDIO_VARIANT := caf
+TARGET_QCOM_DISPLAY_VARIANT := caf
+TARGET_QCOM_MEDIA_VARIANT := caf
 
 # inherit from the proprietary version
 -include vendor/lenovo/kingdom_row/BoardConfigVendor.mk
