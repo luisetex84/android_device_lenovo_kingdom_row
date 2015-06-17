@@ -56,8 +56,5 @@ PRODUCT_PACKAGES += \
     gralloc.msm8974 \
     hwcomposer.msm8974 \
     memtrack.msm8974 \
-    libqdutils \
     liboverlay
 
-# Inherit from msm8974-common
-$(call inherit-product, device/oppo/msm8974-common/msm8974.mk)
