@@ -40,7 +40,8 @@ PRODUCT_COPY_FILES += \
 
 # Wi-Fi
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/xtwifi.conf:system/etc/xtwifi.conf
+    $(LOCAL_PATH)/wifi/xtwifi.conf:system/etc/xtwifi.conf \
+    $(LOCAL_PATH)/wifi/xtwifi.conf:system/etc/lowi.conf
 
 # NFC packages
 PRODUCT_PACKAGES += \
