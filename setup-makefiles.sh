@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 
 set -e
 
-export VENDOR=lenovo
-export DEVICE=kingdom_row
-./../../$VENDOR/kingdom_row-common/setup-makefiles.sh $@
+export VENDOR=oneplus
+export DEVICE=bacon
+./../../oppo/msm8974-common/setup-makefiles.sh $@

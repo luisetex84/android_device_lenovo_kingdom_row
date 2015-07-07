@@ -14,45 +14,56 @@
 # limitations under the License.
 #
 
-# inherit from common kingdom_row
--include device/lenovo/kingdom_row-common/BoardConfigCommon.mk
-
-TARGET_OTA_ASSERT_DEVICE := g3,kingdom_row
-
-# Bluetooth
-BOARD_HAVE_BLUETOOTH_QCOM := true
-BLUETOOTH_HCI_USE_MCT := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lenovo/kingdom_row/bluetooth
+# Inherit from MSM8974 common
+-include device/oppo/msm8974-common/BoardConfigCommon.mk
 
 # Kernel
 TARGET_KERNEL_CONFIG := kingdom_row_defconfig
-TARGET_REQUIRES_BUMP := true
+BOARD_KERNEL_CMDLINE := console=tty60,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3b7 ehci-hcd.park=3 vmalloc=480M androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive
 
-# Partitions
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lenovo/kingdom_row/bluetooth
+
+# Camera
+USE_DEVICE_SPECIFIC_CAMERA := true
+COMMON_GLOBAL_CFLAGS += -DOPPO_CAMERA_HARDWARE
+
+# Dex
+ifeq ($(HOST_OS),linux)
+  ifeq ($(TARGET_BUILD_VARIANT),user)
+    ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT := true
+    endif
+  endif
+endif
+DONT_DEXPREOPT_PREBUILTS := true
+
+# Filesystem
 BOARD_BOOTIMAGE_PARTITION_SIZE          := 20971520
 BOARD_RECOVERYIMAGE_PARTITION_SIZE      := 20971520
 BOARD_SYSTEMIMAGE_PARTITION_SIZE        := 2147483648
 BOARD_CACHEIMAGE_PARTITION_SIZE         := 131072000
 BOARD_USERDATAIMAGE_PARTITION_SIZE      := 27439087000
 BOARD_USERDATAEXTRAIMAGE_PARTITION_SIZE := 29957396480
-BOARD_USERDATAEXTRAIMAGE_PARTITION_NAME := 32G
+BOARD_USERDATAEXTRAIMAGE_PARTITION_NAME := 64G
 BOARD_FLASH_BLOCK_SIZE                  := 131072
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/lenovo/kingdom_row/rootdir/etc/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/lenovo/kingdom_row/rootdir/etc/fstab.bacon
 
-# Wifi
-BOARD_HAS_QCOM_WLAN := true
-BOARD_WLAN_DEVICE := qcwcn
-BOARD_HOSTAPD_DRIVER := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-BOARD_WPA_SUPPLICANT_DRIVER := NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-TARGET_USES_WCNSS_CTRL := true
-TARGET_USES_QCOM_WCNSS_QMI := true
-WIFI_DRIVER_FW_PATH_AP := "ap"
-WIFI_DRIVER_FW_PATH_STA := "sta"
-WPA_SUPPLICANT_VERSION := VER_0_8_X
+TARGET_OTA_ASSERT_DEVICE := kingdom_row,K920
+
+TARGET_INIT_VENDOR_LIB := libinit_bacon
+
+TARGET_WCNSS_MAC_PREFIX := e8bba8
+
+# Workaround for factory issue
+BOARD_VOLD_CRYPTFS_MIGRATE := true
+
+BOARD_NFC_CHIPSET := pn547
+
+AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
+AUDIO_FEATURE_ENABLED_LOW_LATENCY_CAPTURE := true
 
 # inherit from the proprietary version
 -include vendor/lenovo/kingdom_row/BoardConfigVendor.mk

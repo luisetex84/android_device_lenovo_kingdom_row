@@ -1,7 +1,9 @@
 #!/bin/sh
 
-set -e
+#Use Traditional sorting
+export LC_ALL=C
 
-export VENDOR=lenovo
-export DEVICE=kingdom_row
-./../../$VENDOR/kingdom_row-common/extract-files.sh $@
+FP=$(cd ${0%/*} && pwd -P)
+export VENDOR=$(basename $(dirname $FP))
+export DEVICE=$(basename $FP)
+./../../oppo/msm8974-common/extract-files.sh $@

@@ -1,6 +1,6 @@
 [
   {
-    "repository": "android_device_lenovo_kingdom_row-common",
-    "target_path": "device/lenovo/kingdom_row-common"
+    "repository": "android_device_oppo_msm8974-common",
+    "target_path": "device/oppo/msm8974-common"
   }
 ]
