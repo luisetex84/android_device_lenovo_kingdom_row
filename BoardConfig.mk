@@ -15,7 +15,7 @@
 #
 
 # Inherit from MSM8974 common
--include device/oppo/msm8974-common/BoardConfigCommon.mk
+-include device/lenovo/msm8974-common/BoardConfigCommon.mk
 
 # Kernel
 TARGET_KERNEL_CONFIG := kingdom_row_defconfig
