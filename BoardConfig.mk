@@ -49,7 +49,7 @@ BOARD_USERDATAEXTRAIMAGE_PARTITION_NAME := 64G
 BOARD_FLASH_BLOCK_SIZE                  := 131072
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/lenovo/kingdom_row/rootdir/etc/fstab.bacon
+TARGET_RECOVERY_FSTAB := device/lenovo/kingdom_row/rootdir/etc/fstab.kingdom_row
 
 TARGET_OTA_ASSERT_DEVICE := kingdom_row,K920
 
