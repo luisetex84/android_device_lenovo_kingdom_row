@@ -18,8 +18,8 @@
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay vendor/extra/overlays/phone-1080p
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1440
+TARGET_SCREEN_WIDTH := 2560
 
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
@@ -37,6 +37,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml
+
+# Wi-Fi
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/wifi/xtwifi.conf:system/etc/xtwifi.conf
 
 # NFC packages
 PRODUCT_PACKAGES += \
