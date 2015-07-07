@@ -2,6 +2,6 @@
 
 set -e
 
-export VENDOR=oneplus
-export DEVICE=bacon
-./../../oppo/msm8974-common/setup-makefiles.sh $@
+export VENDOR=lenovo
+export DEVICE=kingdom_row
+./../../lenovo/msm8974-common/setup-makefiles.sh $@
