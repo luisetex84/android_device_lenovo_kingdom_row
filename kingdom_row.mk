@@ -27,7 +27,7 @@ PRODUCT_CHARACTERISTICS := nosdcard
 # Ramdisk
 PRODUCT_PACKAGES += \
     libinit_bacon \
-    fstab.bacon \
+    fstab.kingdom_row \
     init.bacon.rc \
     init.qcom.usb.rc \
     ueventd.bacon.rc
