@@ -28,8 +28,18 @@ PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_PACKAGES += \
     libinit_bacon \
     fstab.kingdom_row \
+    fstab.qcom \
+    init.qcom.rc \
+    init.qcom.sh \
+    init.target.rc \
     init.bacon.rc \
     init.qcom.usb.rc \
+    init.qcom.usb.sh \
+    init.qcom.factory.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.class_core.sh \
+    init.mdm.sh \
+    init.class_main.sh \
     ueventd.bacon.rc
 
 # Audio
