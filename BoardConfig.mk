@@ -51,9 +51,6 @@ TARGET_WCNSS_MAC_PREFIX := e8bba8
 
 # Workaround for factory issue
 BOARD_VOLD_CRYPTFS_MIGRATE := true
-
-CONFIG_CTRL_IFACE := true
-
 BOARD_NFC_CHIPSET := nfc-nci
 
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true

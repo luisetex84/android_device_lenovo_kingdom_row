@@ -39,5 +39,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=K920 PRODUCT_NAME=kingdom_row
 
 ## Use the latest approved GMS identifiers unless running a signed build
 ifneq ($(SIGN_BUILD),true)
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT=Lenovo/kingdom_row/kingdom_row:5.0.2/LRX22G/K920_S246_150520_ROW:user/release-keys PRIVATE_BUILD_DESC="kingdom_row/kingdom_row-user 5.0.2 LRX22G/K920_S246_150520_ROW release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_FINGERPRINT=Lenovo/kingdom_row/kingdom_row:5.0.2/LRX22G/K920_S246_150520_ROW:user/release-keys \
+    PRIVATE_BUILD_DESC="kingdom_row/kingdom_row-user 5.0.2 LRX22G/K920_S246_150520_ROW release-keys"
 endif
