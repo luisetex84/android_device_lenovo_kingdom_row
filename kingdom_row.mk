@@ -56,7 +56,6 @@ PRODUCT_COPY_FILES += \
 
 # NFC packages
 PRODUCT_PACKAGES += \
-    libnfc-nci \
     NfcNci \
     Tag \
     nfc_nci.pn54x.default \
