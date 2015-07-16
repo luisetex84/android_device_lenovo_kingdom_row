@@ -46,6 +46,7 @@ PRODUCT_COPY_FILES += device/lenovo/kingdom_row/rootdir/etc/recovery.fstab:recov
 TARGET_RECOVERY_INITRC := recovery/init.rc
 DEVICE_RESOLUTION := 1440x2560
 BOARD_HAS_NO_REAL_SDCARD := true
+TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 
 TARGET_OTA_ASSERT_DEVICE := kingdom_row,K920
 
