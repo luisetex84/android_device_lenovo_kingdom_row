@@ -27,7 +27,7 @@ PRODUCT_CHARACTERISTICS := nosdcard
 # Ramdisk
 PRODUCT_PACKAGES += \
     libinit_bacon \
-    fstab.kingdom_row \
+    recovery.fstab \
     fstab.qcom \
     init.qcom.rc \
     init.qcom.sh \
