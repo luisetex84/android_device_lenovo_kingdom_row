@@ -50,7 +50,7 @@ PRODUCT_PACKAGES += \
     init.mdm.sh \
     init.class_main.sh \
     ueventd.rc \
-    ueventd.bacon.rc
+    ueventd.qcom.rc
 
 PRODUCT_COPY_FILES += \
     device/lenovo/kingdom_row/rootdir/etc/init.rc:root/init.rc

@@ -15,7 +15,7 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from bacon device
+# Inherit from kingdom_row device
 $(call inherit-product, device/lenovo/kingdom_row/kingdom_row.mk)
 
 # Enhanced NFC
