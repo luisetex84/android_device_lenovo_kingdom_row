@@ -49,8 +49,7 @@ PRODUCT_PACKAGES += \
     init.qcom.class_core.sh \
     init.mdm.sh \
     init.class_main.sh \
-    ueventd.rc \
-    ueventd.qcom.rc
+    ueventd.rc
 
 PRODUCT_COPY_FILES += \
     device/lenovo/kingdom_row/rootdir/etc/init.rc:root/init.rc
