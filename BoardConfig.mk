@@ -183,8 +183,8 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/lenovo/kingdom_row/rootdir/etc/recovery.fstab
-PRODUCT_COPY_FILES += device/lenovo/kingdom_row/rootdir/etc/recovery.fstab:recovery/root/etc/twrp.fstab
+TARGET_RECOVERY_FSTAB := device/lenovo/kingdom_row/rootdir/system/etc/recovery.fstab
+PRODUCT_COPY_FILES += device/lenovo/kingdom_row/rootdir/system/etc/recovery.fstab:recovery/root/etc/twrp.fstab
 TARGET_RECOVERY_INITRC := recovery/init.rc
 DEVICE_RESOLUTION := 1440x2560
 BOARD_HAS_NO_REAL_SDCARD := true
