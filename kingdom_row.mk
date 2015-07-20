@@ -30,7 +30,6 @@ PRODUCT_PACKAGES += \
     healthd \
     security_boot_check \
     testmode \
-    init.rc \
     init.testmode.rc \
     init.lenovo.log.rc \
     init.lenovo.crash.rc \
@@ -52,6 +51,9 @@ PRODUCT_PACKAGES += \
     init.class_main.sh \
     ueventd.rc \
     ueventd.bacon.rc
+
+PRODUCT_COPY_FILES += \
+    device/lenovo/kingdom_row/rootdir/etc/init.rc:root/init.rc
 
 # Audio
 PRODUCT_COPY_FILES += \
