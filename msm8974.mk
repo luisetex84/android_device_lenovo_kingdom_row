@@ -284,4 +284,4 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product-if-exists, vendor/lenovo/msm8974-common/msm8974-common-vendor.mk)
 
 # Inherit from lenovo-common
-$(call inherit-product, device/lenovo/common/common.mk)
+$(call inherit-product, device/lenovo/kingdom_row/common.mk)
