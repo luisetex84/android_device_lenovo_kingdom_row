@@ -61,57 +61,64 @@ PRODUCT_PACKAGES += \
     memtrack.msm8974 \
     liboverlay
 
-# Ramdisk
+# Ramdisk root
 PRODUCT_PACKAGES += \
-    busybox \
     default.prop \
-    healthd \
-    security_boot_check \
-    testmode \
-    init.testmode.rc \
-    init.lenovo.log.rc \
-    init.lenovo.crash.rc \
-    libinit_msm_lenovo \
-    recovery.fstab \
     fstab.qcom \
+    init.class_main.sh \
+    init.lenovo.crash.rc \
+    init.lenovo.log.rc \
+    init.mdm.sh \
+    init.qcom.class_core.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.factory.sh \
     init.qcom.rc \
     init.qcom.sh \
-    init.target.rc \
-    init.bacon.rc \
-    init.qcom.usb.rc \
-    init.qcom.usb.sh \
-    init.qcom.factory.sh \
     init.qcom.ssr.sh \
     init.qcom.syspart_fixup.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.class_core.sh \
-    init.mdm.sh \
-    init.class_main.sh \
-    init.qcom.bt.sh \
-    init.nxp.nfc.sh \
-    init.lenovo.wifi.sh \
-    init.ath3k.bt.sh \
-    init.qcom.coex.sh \
-    init.qcom.fm.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.sdio.sh \
-    init.crda.sh \
-    init.qcom.uicc.sh \
-    hcidump.sh \
-    hsic.control.bt.sh \
-    encfs_contrl.sh \
-    encfs_wrapper.sh \
-    init.qcom.audio.sh \
-    init.qcom.efs.sync.sh \
-    init.qcom.modem_links.sh \
-    init.qcom.wifi.sh \
-    init.qcom-common.rc \
-    init.recovery.qcom.rc \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh \
+    init.target.rc \
+    init.testmode.rc \
     ueventd.qcom.rc \
     ueventd.rc
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/init.rc:root/init.rc
+    $(LOCAL_PATH)/rootdir/init.rc:root/init.rc
+
+# Ramdisk sbin
+PRODUCT_PACKAGES += \
+    busybox \
+    healthd \
+    libinit_msm_lenovo \
+    security_boot_check \
+    testmode
+
+# system/etc
+PRODUCT_PACKAGES += \
+    encfs_contrl.sh \
+    encfs_wrapper.sh \
+    hcidump.sh \
+    hsic.control.bt.sh \
+    init.ath3k.bt.sh \
+    init.cne.rc \
+    init.crda.sh \
+    init.lenovo.wifi.sh \
+    init.nxp.nfc.sh \
+    init.qcom-common.rc \
+    init.qcom.audio.sh \
+    init.qcom.bt.sh \
+    init.qcom.coex.sh \
+    init.qcom.efs.sync.sh \
+    init.qcom.fm.sh \
+    init.qcom.modem_links.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sdio.sh \
+    init.qcom.uicc.sh \
+    init.qcom.wifi.sh \
+    init.recovery.qcom.rc \
+    recovery.fstab
+
 
 # Audio
 PRODUCT_COPY_FILES += \

@@ -275,6 +275,8 @@ on late-init
 
 
 on post-fs
+    export_rc /system/etc/init.cne.rc
+
     # once everything is setup, no need to modify /
     mount rootfs rootfs / ro remount
     # mount shared so changes propagate into child namespaces
