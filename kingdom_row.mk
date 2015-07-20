@@ -18,6 +18,8 @@ ifneq ($(QCPATH),)
 $(call inherit-product-if-exists, $(QCPATH)/common/config/device-vendor.mk)
 endif
 
+COMMON_FOLDER := device/lenovo/kingdom_row
+
 # overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay vendor/extra/overlays/phone-1080p
 
@@ -27,6 +29,20 @@ TARGET_SCREEN_WIDTH := 2560
 
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
+
+# Keyhandler
+PRODUCT_PACKAGES += \
+    ConfigPanel \
+    com.cyanogenmod.keyhandler
+
+PRODUCT_SYSTEM_SERVER_JARS += com.cyanogenmod.keyhandler
+
+# never dexopt the keyhandler
+$(call add-product-dex-preopt-module-config,com.cyanogenmod.keyhandler,disable)
+
+# Recovery
+PRODUCT_PACKAGES += \
+    librecovery_updater_lenovo
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -360,7 +376,4 @@ $(call inherit-product-if-exists, vendor/lenovo/kingdom_row/kingdom_row-vendor.m
 ifneq ($(QCPATH),)
 $(call inherit-product-if-exists, $(QCPATH)/prebuilt_HY11/target/product/msm8974/prebuilt.mk)
 endif
-
-# Inherit from lenovo-common
-$(call inherit-product, device/lenovo/kingdom_row/common.mk)
 
