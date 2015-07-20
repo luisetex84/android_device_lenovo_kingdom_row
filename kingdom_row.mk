@@ -111,4 +111,4 @@ $(call inherit-product-if-exists, $(QCPATH)/prebuilt_HY11/target/product/msm8974
 endif
 
 # Inherit from msm8974-common
-$(call inherit-product, device/lenovo/msm8974-common/msm8974.mk)
+$(call inherit-product, device/lenovo/kingdom_row/msm8974.mk)
