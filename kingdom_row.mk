@@ -26,6 +26,14 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+    busybox \
+    healthd \
+    security_boot_check \
+    testmode \
+    init.rc \
+    init.testmode.rc \
+    init.lenovo.log.rc \
+    init.lenovo.crash.rc \
     libinit_bacon \
     recovery.fstab \
     fstab.qcom \
@@ -36,10 +44,13 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     init.qcom.factory.sh \
+    init.qcom.ssr.sh \
+    init.qcom.syspart_fixup.sh \
     init.qcom.early_boot.sh \
     init.qcom.class_core.sh \
     init.mdm.sh \
     init.class_main.sh \
+    ueventd.rc \
     ueventd.bacon.rc
 
 # Audio
