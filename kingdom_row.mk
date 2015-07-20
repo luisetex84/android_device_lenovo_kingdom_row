@@ -33,7 +33,7 @@ PRODUCT_PACKAGES += \
     init.testmode.rc \
     init.lenovo.log.rc \
     init.lenovo.crash.rc \
-    libinit_bacon \
+    libinit_msm_lenovo \
     recovery.fstab \
     fstab.qcom \
     init.qcom.rc \

@@ -14,8 +14,7 @@
 # limitations under the License.
 #
 
-# inherit from Lenovo common
--include device/lenovo/common/BoardConfigCommon.mk
+BOARD_VENDOR := lenovo
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := device/lenovo/kingdom_row/include
@@ -80,6 +79,17 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # CM Hardware
 BOARD_HARDWARE_CLASS += device/lenovo/kingdom_row/cmhw
+
+# MSM Init
+TARGET_INIT_VENDOR_LIB := libinit_msm_lenovo
+
+# QCOM Power
+TARGET_POWERHAL_VARIANT := qcom
+
+# Releasetools
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_lenovo
+TARGET_RELEASETOOLS_EXTENSIONS := device/lenovo/kingdom_row
+
 
 # Graphics
 BOARD_EGL_CFG := device/lenovo/kingdom_row/configs/egl.cfg
