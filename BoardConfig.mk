@@ -41,7 +41,7 @@ TARGET_CPU_VARIANT := krait
 TARGET_BOARD_INFO_FILE ?= device/lenovo/kingdom_row/board-info.txt
 
 # Kernel
-BOARD_CUSTOM_BOOTIMG_MK := device/lenovo/msm8974-common/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/lenovo/kingdom_row/mkbootimg.mk
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
@@ -79,7 +79,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lenovo/kingdom_row/bluetoo
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # CM Hardware
-BOARD_HARDWARE_CLASS += device/lenovo/msm8974-common/cmhw
+BOARD_HARDWARE_CLASS += device/lenovo/kingdom_row/cmhw
 
 # Graphics
 BOARD_EGL_CFG := device/lenovo/msm8974-common/configs/egl.cfg
@@ -142,7 +142,7 @@ BOARD_FLASH_BLOCK_SIZE                  := 131072
 TARGET_NO_RPC := true
 
 # GPS HAL lives here
-TARGET_GPS_HAL_PATH := device/lenovo/msm8974-common/gps
+TARGET_GPS_HAL_PATH := device/lenovo/kingdom_row/gps
 TARGET_PROVIDES_GPS_LOC_API := true
 
 # QCRIL
@@ -207,7 +207,7 @@ endif
 include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
-        device/lenovo/msm8974-common/sepolicy
+        device/lenovo/kingdom_row/sepolicy
 
 -include vendor/lenovo/msm8974-common/BoardConfigVendor.mk
 -include vendor/lenovo/kingdom_row/BoardConfigVendor.mk

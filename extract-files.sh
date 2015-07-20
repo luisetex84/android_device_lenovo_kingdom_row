@@ -29,8 +29,8 @@ rm -rf $BASE/*
 DEVBASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 rm -rf $DEVBASE/*
 
-extract ../../lenovo/msm8974-common/proprietary-files-qc.txt $BASE
-extract ../../lenovo/msm8974-common/proprietary-files.txt $DEVBASE
+extract ../../lenovo/kingdom_row/proprietary-files-qc.txt $BASE
+extract ../../lenovo/kingdom_row/proprietary-files.txt $DEVBASE
 extract ../../$VENDOR/$DEVICE/device-proprietary-files.txt $DEVBASE
 
 #Use Traditional sorting
@@ -39,4 +39,4 @@ export LC_ALL=C
 FP=$(cd ${0%/*} && pwd -P)
 export VENDOR=$(basename $(dirname $FP))
 export DEVICE=$(basename $FP)
-./../../lenovo/msm8974-common/extract-files.sh $@
+./../../lenovo/kingdom_row/extract-files.sh $@

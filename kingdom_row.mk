@@ -110,5 +110,5 @@ ifneq ($(QCPATH),)
 $(call inherit-product-if-exists, $(QCPATH)/prebuilt_HY11/target/product/msm8974/prebuilt.mk)
 endif
 
-# Inherit from msm8974-common
+# Inherit from msm8974
 $(call inherit-product, device/lenovo/kingdom_row/msm8974.mk)
