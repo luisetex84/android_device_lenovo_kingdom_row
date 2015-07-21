@@ -118,8 +118,60 @@ PRODUCT_PACKAGES += \
     init.qcom.uicc.sh \
     init.qcom.wifi.sh \
     init.recovery.qcom.rc \
-    recovery.fstab
+    recovery.fstab \
+    usf_post_boot.sh
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/system/etc/qca6234-service.sh:system/etc/qca6234-service.sh \
+    $(LOCAL_PATH)/rootdir/system/etc/systemfiles.md5.zip:system/etc/systemfiles.md5.zip \
+    $(LOCAL_PATH)/rootdir/system/etc/sensor_def_qcomdev.conf:system/etc/sensor_def_qcomdev.conf \
+    $(LOCAL_PATH)/rootdir/system/etc/wfdconfig.xml:system/etc/wfdconfig.xml \
+    $(LOCAL_PATH)/rootdir/system/etc/wfdconfigsink.xml:system/etc/wfdconfigsink.xml \
+    $(LOCAL_PATH)/rootdir/system/etc/whitelist_appops.xml:system/etc/whitelist_appops.xml
+
+# system/etc/cne
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/system/etc/cne/andsfCne.xml:system/etc/cne/andsfCne.xml
+
+# system/etc/data
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/system/etc/data/qmi_config.xml:system/etc/data/qmi_config.xml
+
+# system/etc/dpm
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/system/etc/dpm/nsrm/NsrmConfiguration.xml:system/etc/dpm/nsrm/NsrmConfiguration.xml
+
+# system/etc/param
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/system/etc/param/route.xml:system/etc/param/route.xml
+
+# system/etc/permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/btmultisim.xml:system/etc/permissions/btmultisim.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/com.lenovo.adapter.xml:system/etc/permissions/com.lenovo.adapter.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/com.lenovo.component.xml:system/etc/permissions/com.lenovo.component.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/com.lenovo.coverapp.xml:system/etc/permissions/com.lenovo.coverapp.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/com.lenovo.framework.appiconintegration.support.xml:system/etc/permissions/com.lenovo.framework.appiconintegration.support.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/com.lenovo.geminisettings.adapter.xml:system/etc/permissions/com.lenovo.geminisettings.adapter.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/com.lenovo.keyguard.xml:system/etc/permissions/com.lenovo.keyguard.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/com.lenovo.simsettings.adapter.xml:system/etc/permissions/com.lenovo.simsettings.adapter.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/com.lenovo.theme.editorfonttypeface.xml:system/etc/permissions/com.lenovo.theme.editorfonttypeface.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/com.lenovo.theme.fontsupport.xml:system/etc/permissions/com.lenovo.theme.fontsupport.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/com.lenovo.weather.custom.widget.support.xml:system/etc/permissions/com.lenovo.weather.custom.widget.support.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/com.qualcomm.location.vzw_library.xml:system/etc/permissions/com.qualcomm.location.vzw_library.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/com.quicinc.cne.xml:system/etc/permissions/com.quicinc.cne.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/dpmapi.xml:system/etc/permissions/dpmapi.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/imscm.xml:system/etc/permissions/imscm.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/interface_permissions.xml:system/etc/permissions/interface_permissions.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/org.simalliance.openmobileapi.xml:system/etc/permissions/org.simalliance.openmobileapi.xml
+    $(LOCAL_PATH)/rootdir/system/etc/permissions/qti_permissions.xml:system/etc/permissions/qti_permissions.xml
 
 # Audio
 PRODUCT_COPY_FILES += \
