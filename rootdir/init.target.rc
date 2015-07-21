@@ -71,8 +71,6 @@ on post-fs-data
     mkdir /tombstones/dsps 0771 system system
     mkdir /data/usf 0700 system system
 
-    insmod /system/lib/modules/wlan.ko
-
 # Create folder for secure account
     mkdir /data/secure 0700 system system
     mkdir /data/secure_storage 0700 media_rw media_rw
