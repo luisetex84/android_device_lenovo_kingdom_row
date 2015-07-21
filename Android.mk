@@ -80,7 +80,7 @@ TQS_IMAGES := \
 
 TQS_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(TQS_IMAGES)))
 $(TQS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo “TQS firmware link: $@"
+	@echo "TQS firmware link: $@"
 	@mkdir -p $(dir $@)
 	@rm -rf $@
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
