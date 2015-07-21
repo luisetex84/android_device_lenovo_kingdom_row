@@ -63,7 +63,6 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk root
 PRODUCT_PACKAGES += \
-    custom_init.rc \
     default.prop \
     fstab.qcom \
     init.class_main.sh \
@@ -83,6 +82,10 @@ PRODUCT_PACKAGES += \
     init.testmode.rc \
     ueventd.qcom.rc \
     ueventd.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/init.rc:root/init.rc
+
 
 # Ramdisk sbin
 PRODUCT_PACKAGES += \
