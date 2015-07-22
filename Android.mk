@@ -172,7 +172,9 @@ $(shell mkdir -p $(TARGET_OUT)/etc/firmware/wcd9320; \
 # version in /data/misc/wifi
 $(shell mkdir -p $(TARGET_OUT)/etc/firmware/wlan/prima; \
     ln -sf /data/misc/wifi/WCNSS_qcom_cfg.ini \
-	    $(TARGET_OUT)/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
+	    $(TARGET_OUT)/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini; \
+    ln -sf /persist/WCNSS_qcom_wlan_nv.bin \
+	    $(TARGET_OUT)/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin)
 
 # Create wlan.ko
 $(shell mkdir -p $(TARGET_OUT)/lib/modules; \
