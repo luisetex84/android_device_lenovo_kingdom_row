@@ -179,5 +179,13 @@ $(shell mkdir -p $(TARGET_OUT)/lib/modules; \
         ln -sf /system/lib/modules/pronto/pronto_wlan.ko \
                $(TARGET_OUT)/lib/modules/wlan.ko)
 
+# Create links for ims
+$(shell mkdir -p $(TARGET_OUT)/vendor/app/ims/lib/arm/; \
+        ln -sf /system/vendor/lib/libimscamera_jni.so \
+               $(TARGET_OUT)/vendor/app/ims/lib/arm/libimscamera_jni.so)
+
+$(shell mkdir -p $(TARGET_OUT)/vendor/app/ims/lib/arm/; \
+        ln -sf /system/vendor/lib/libimsmedia_jni.so \
+               $(TARGET_OUT)/vendor/app/ims/lib/arm/libimsmedia_jni.so)
 
 endif
