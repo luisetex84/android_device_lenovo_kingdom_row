@@ -219,5 +219,4 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
         device/lenovo/kingdom_row/sepolicy
 
--include vendor/lenovo/msm8974-common/BoardConfigVendor.mk
 -include vendor/lenovo/kingdom_row/BoardConfigVendor.mk

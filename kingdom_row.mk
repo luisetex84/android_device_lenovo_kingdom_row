@@ -421,9 +421,6 @@ PRODUCT_PROPERTY_OVERRIDES +=
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1
 
-# call the proprietary setup
-$(call inherit-product-if-exists, vendor/lenovo/msm8974-common/msm8974-common-vendor.mk)
-
 # Fuuuuu
 PRODUCT_PACKAGES += camera.bacon
 
