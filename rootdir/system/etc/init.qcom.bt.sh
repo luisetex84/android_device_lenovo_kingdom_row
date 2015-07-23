@@ -42,7 +42,7 @@ loge ()
 
 logi ()
 {
-  /system/bin/log -t $LOG_TAG -p i "$LOG_NAME $@"
+#  /system/bin/log -t $LOG_TAG -p i "$LOG_NAME $@"
 }
 
 failed ()
@@ -103,7 +103,15 @@ config_bt ()
         setprop ro.qualcomm.bluetooth.map true
         setprop ro.qualcomm.bluetooth.nap true
         setprop ro.bluetooth.sap true
-        setprop ro.bluetooth.dun false
+        case $target in
+          "apq8084")
+              setprop ro.bluetooth.dun true
+              logi "Enabling BT-DUN for APQ8084"
+              ;;
+          *)
+              setprop ro.bluetooth.dun false
+              ;;
+        esac
         ;;
     "msm")
         setprop ro.qualcomm.bluetooth.opp true
@@ -152,10 +160,13 @@ config_bt ()
            setprop ro.qualcomm.bt.hci_transport smd
        fi
        ;;
-    "apq8084")
-       if ["$btsoc" != "rome"]
+    "apq8084" | "mpq8092" )
+       if [ "$btsoc" != "rome" ]
        then
            setprop ro.qualcomm.bt.hci_transport smd
+       elif [ "$btsoc" = "rome" ]
+       then
+           setprop ro.bluetooth.hfp.ver 1.6
        fi
        ;;
     *)
