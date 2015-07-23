@@ -27,15 +27,15 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 PRODUCT_NAME := cm_kingdom_row
 PRODUCT_DEVICE := kingdom_row
 PRODUCT_MANUFACTURER := Lenovo
-PRODUCT_MODEL := K920
+PRODUCT_MODEL := Lenovo K920
 
 PRODUCT_GMS_CLIENTID_BASE := android-lenovo
 
-PRODUCT_BRAND := lenovo
+PRODUCT_BRAND := Lenovo
 TARGET_VENDOR := lenovo
 TARGET_VENDOR_PRODUCT_NAME := kingdom_row
-TARGET_VENDOR_DEVICE_NAME := K920
-PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=K920 PRODUCT_NAME=kingdom_row
+TARGET_VENDOR_DEVICE_NAME := kingdom_row
+PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=kingdom_row PRODUCT_NAME=kingdom_row
 
 ## Use the latest approved GMS identifiers unless running a signed build
 ifneq ($(SIGN_BUILD),true)
