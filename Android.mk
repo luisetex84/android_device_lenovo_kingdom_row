@@ -177,9 +177,9 @@ $(shell mkdir -p $(TARGET_OUT)/etc/firmware/wlan/prima; \
 	    $(TARGET_OUT)/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin)
 
 # Create wlan.ko
-$(shell mkdir -p $(TARGET_OUT)/lib/modules; \
-        ln -sf /system/lib/modules/pronto/pronto_wlan.ko \
-               $(TARGET_OUT)/lib/modules/wlan.ko)
+#$(shell mkdir -p $(TARGET_OUT)/lib/modules; \
+#        ln -sf /system/lib/modules/pronto/pronto_wlan.ko \
+#               $(TARGET_OUT)/lib/modules/wlan.ko)
 
 # Create links for ims
 $(shell mkdir -p $(TARGET_OUT)/vendor/app/ims/lib/arm/; \
