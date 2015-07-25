@@ -1,6 +1,9 @@
 # system.prop for msm8974
 #
 
+persist.radio.add_power_save=1
+persist.radio.apm_sim_not_pwdn=1
+ro.lenovo.sim=dsds
 rild.libpath=/vendor/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
 persist.rild.nitz_plmn=
