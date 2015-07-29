@@ -241,9 +241,6 @@ on init
     chown system log /sys/fs/pstore/console-ramoops
     chmod 0440 /sys/fs/pstore/console-ramoops
 
-on early-boot
-    start syspart_fixup
-
 # Healthd can trigger a full boot from charger mode by signaling this
 # property when the power button is held.
 on property:sys.boot_from_charger_mode=1
@@ -804,11 +801,3 @@ service lenovolog /system/bin/init.lenovo.log.sh
     class main
     disabled
     oneshot
-
-service syspart_fixup /system/bin/sh /init.qcom.syspart_fixup.sh msm8974
-    class main
-    user root
-    group root
-    disabled
-    oneshot
-
