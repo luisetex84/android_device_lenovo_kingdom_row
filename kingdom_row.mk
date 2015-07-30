@@ -207,6 +207,7 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libaudioamp \
+    tfa9890_amp \
     tinymix
 
 PRODUCT_PROPERTY_OVERRIDES += \
