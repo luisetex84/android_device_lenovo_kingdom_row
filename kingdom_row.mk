@@ -208,7 +208,13 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libaudioamp \
     tfa9890_amp \
-    tinymix
+    tinymix \
+    libtfahal \
+    libtfa \
+    libtfasrv \
+    libtfa98xx \
+    climax_init \
+    climax_static
 
 PRODUCT_PROPERTY_OVERRIDES += \
     mm.enable.smoothstreaming=true \
