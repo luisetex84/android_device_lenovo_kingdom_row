@@ -206,14 +206,13 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libaudioamp \
-    tfa9890_amp \
     tinymix \
     libtfahal \
     libtfa \
     libtfasrv \
     libtfa98xx \
     climax_init \
+    climax \
     climax_static
 
 PRODUCT_PROPERTY_OVERRIDES += \
