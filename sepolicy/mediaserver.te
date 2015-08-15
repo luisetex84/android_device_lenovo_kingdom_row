@@ -13,3 +13,4 @@ allow mediaserver system_server:unix_stream_socket { read write };
 allow mediaserver time_daemon:unix_stream_socket { connectto };
 allow mediaserver audio_data_file:dir { add_name getattr ioctl open read search write remove_name };
 allow mediaserver system_data_file:file { getattr read ioctl lock open };
+allow mediaserver device:chr_file { read write open ioctl };
