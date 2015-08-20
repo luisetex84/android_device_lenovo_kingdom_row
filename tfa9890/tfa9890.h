@@ -15,7 +15,7 @@
  */
 
 /* Kernel header */
-#include "sound/tfa9890.h"
+#include <misc/tfa9890.h>
 
 #define TFA9890_DEVICE "/dev/tfa9890"
 
