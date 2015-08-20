@@ -207,7 +207,6 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     tinymix \
-    tfa9890_amp \
     libtfahal \
     libtfa \
     libtfasrv \

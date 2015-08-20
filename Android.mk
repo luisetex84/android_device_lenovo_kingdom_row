@@ -22,12 +22,6 @@ include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES := \
-        tfa9890.c \
-        tfa9890_amp.c
-
-LOCAL_MODULE := tfa9890_amp
-
 MODEM_IMAGES := \
     modem.b00 modem.b01 modem.b02 modem.b03 modem.b06 modem.b08 \
     modem.b09 modem.b11 modem.b12 modem.b13 modem.b14 modem.b15 \
