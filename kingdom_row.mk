@@ -216,6 +216,9 @@ PRODUCT_PACKAGES += \
     climax \
     climax_static
 
+PRODUCT_PACKAGES += \
+    tfa9890_amp
+
 PRODUCT_PROPERTY_OVERRIDES += \
     mm.enable.smoothstreaming=true \
     mm.enable.qcom_parser=3310129 \
