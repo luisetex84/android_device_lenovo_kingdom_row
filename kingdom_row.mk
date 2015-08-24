@@ -207,6 +207,7 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libaudio-resampler \
+    libaudioroute \
     tinymix \
     libtfahal \
     libtfa \
