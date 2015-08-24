@@ -15,9 +15,9 @@
  */
 
 /* Kernel header */
-#include <misc/tfa9890.h>
+#include <sound/tfa98xx.h>
 
-#define TFA9890_DEVICE "/dev/tfa9890"
+#define TFA9890_DEVICE "/dev/tfa98xx"
 
 /* All the files in /system/etc/tfa98xx */
 #define PATCH_DSP_FILE "/system/etc/tfa98xx/TFA9890.patch"
