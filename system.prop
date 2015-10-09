@@ -155,12 +155,12 @@ persist.radio.sap_silent_pin=1
 #
 # ADDITIONAL_BUILD_PROPERTIES
 #
-ro.config.notification_sound=Notice.ogg
-ro.config.alarm_alert=New_Morning.ogg
-ro.config.ringtone=Fantastic_Clang.ogg
-ro.config.ringtone_2=Fantastic_Clang.ogg
-ro.config.sms_notifi_sound=Bump.ogg
-ro.config.sms_notifi_sound_2=Bump.ogg
+ro.config.notification_sound=Argon.ogg
+ro.config.alarm_alert=Helium.ogg
+ro.config.ringtone=Orion.ogg
+ro.config.ringtone_2=Orion.ogg
+ro.config.sms_notifi_sound=Argon.ogg
+ro.config.sms_notifi_sound_2=Argon.ogg
 persist.sys.lenovo.shutdown=TRUE
 persist.sys.lenovo.log.limit=4000
 persist.sys.lenovo.log.disk=/storage/emulated/0
