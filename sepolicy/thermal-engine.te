@@ -1,2 +1,4 @@
 allow thermal-engine sysfs:file { getattr ioctl lock open read write append };
-allow thermal-engine thermal-engine:capability { dac_override dac_read_search fsetid sys_boot };
+allow thermal-engine thermal-engine:capability { dac_override dac_read_search fsetid net_admin sys_boot };
+allow thermal-engine thermal-engine:netlink_kobject_uevent_socket { read create setopt bind };
+allow thermal-engine thermal-engine:dir { search };

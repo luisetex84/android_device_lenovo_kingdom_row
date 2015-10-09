@@ -41,8 +41,8 @@ PRODUCT_SYSTEM_SERVER_JARS += com.cyanogenmod.keyhandler
 $(call add-product-dex-preopt-module-config,com.cyanogenmod.keyhandler,disable)
 
 # Recovery
-PRODUCT_PACKAGES += \
-    librecovery_updater_lenovo
+#PRODUCT_PACKAGES += \
+#    librecovery_updater_lenovo
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -207,6 +207,7 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libaudio-resampler \
+    libaudioroute \
     tinymix \
     libtfahal \
     libtfa \
