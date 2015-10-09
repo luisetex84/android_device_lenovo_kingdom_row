@@ -24,4 +24,3 @@ allow system_server audio_device:chr_file { getattr ioctl lock open read append 
 allow system_server firmware_file:dir { getattr ioctl open read search };
 allow system_server location_socket:sock_file { append getattr ioctl lock open read write create link rename setattr unlink };
 allow system_server sysfs_socinfo:file { getattr ioctl lock open read write };
-allow system_server self:capability { kill net_admin net_bind_service net_broadcast net_raw sys_boot sys_module sys_nice sys_resource sys_time sys_tty_config };
