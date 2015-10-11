@@ -34,7 +34,7 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := krait
-#TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
+TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 # Assertions
 TARGET_BOARD_INFO_FILE ?= device/lenovo/kingdom_row/board-info.txt
@@ -61,12 +61,9 @@ COMMON_GLOBAL_CPPFLAGS += -DNO_SECURE_DISCARD -DUSE_RIL_VERSION_10
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
-# BOARD_USES_QC_TIME_SERVICES := true
+BOARD_USES_QC_TIME_SERVICES := true
 TARGET_USES_QCOM_BSP := true
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
-TARGET_QCOM_AUDIO_VARIANT := caf
-TARGET_QCOM_DISPLAY_VARIANT := caf-new
-TARGET_QCOM_MEDIA_VARIANT := caf-new
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
@@ -212,8 +209,9 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/lenovo/kingdom_row/rootdir/system/etc/recovery.fstab
-PRODUCT_COPY_FILES += device/lenovo/kingdom_row/rootdir/system/etc/recovery.fstab:recovery/root/etc/twrp.fstab
+RECOVERY_FSTAB_VERSION := 2
+TARGET_RECOVERY_FSTAB := device/lenovo/kingdom_row/rootdir/fstab.qcom
+#PRODUCT_COPY_FILES += device/lenovo/kingdom_row/rootdir/system/etc/recovery.fstab:recovery/root/etc/twrp.fstab
 TARGET_RECOVERY_INITRC := recovery/init.rc
 DEVICE_RESOLUTION := 1440x2560
 BOARD_HAS_NO_REAL_SDCARD := true
