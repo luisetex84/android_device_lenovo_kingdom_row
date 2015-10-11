@@ -17,3 +17,4 @@ allow init shell_data_file:file { getattr relabelto append audit_access create i
 allow init shell_data_file:lnk_file { relabelto append audit_access create execmod execute getattr ioctl link lock mounton open quotaon read relabelfrom rename setattr swapon unlink write };
 allow init shell_data_file:sock_file { relabelto append audit_access create execmod execute getattr ioctl link lock mounton open quotaon read relabelfrom rename setattr swapon unlink write };
 allow init vfat:dir { getattr ioctl open read search };
+allow init self:capability { sys_module };
