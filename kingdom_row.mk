@@ -259,6 +259,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     wcnss_service
 
+# FM Radio
+PRODUCT_PACKAGES += \
+    qcom.fmradio
+
 # NFC packages
 PRODUCT_PACKAGES += \
     NfcNci \
