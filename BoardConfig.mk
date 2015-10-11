@@ -210,7 +210,7 @@ endif
 
 # Recovery
 RECOVERY_FSTAB_VERSION := 2
-TARGET_RECOVERY_FSTAB := device/lenovo/kingdom_row/rootdir/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/lenovo/kingdom_row/rootdir/system/etc/recovery.fstab
 #PRODUCT_COPY_FILES += device/lenovo/kingdom_row/rootdir/system/etc/recovery.fstab:recovery/root/etc/twrp.fstab
 TARGET_RECOVERY_INITRC := recovery/init.rc
 DEVICE_RESOLUTION := 1440x2560
