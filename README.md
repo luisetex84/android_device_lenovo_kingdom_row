@@ -6,7 +6,7 @@ Device configuration for Lenovo VIBE Z2 Pro (International)
 Basic   | Spec Sheet
 -------:|:-------------------------
 CPU     | Quad-core 2.5 GHz Krait 400
-CHIPSET | Qualcomm MSM8975AC Snapdragon 801
+CHIPSET | Qualcomm MSM8974AC Snapdragon 801
 GPU     | Adreno 330
 Memory  | 3GB RAM
 Shipped Android Version | 4.4.2
