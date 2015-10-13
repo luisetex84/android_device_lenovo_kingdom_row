@@ -261,7 +261,10 @@ PRODUCT_PACKAGES += \
 
 # FM Radio
 PRODUCT_PACKAGES += \
-    qcom.fmradio
+    qcom.fmradio \
+    libqcomfm_jni \
+    FM2 \
+    FMRecord
 
 # NFC packages
 #PRODUCT_PACKAGES += \
