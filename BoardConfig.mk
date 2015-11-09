@@ -195,7 +195,4 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
     device/lenovo/kingdom_row/sepolicy
 
-BOARD_SEPOLICY_UNION += \
-    fingerprint.te
-
 -include vendor/lenovo/kingdom_row/BoardConfigVendor.mk
