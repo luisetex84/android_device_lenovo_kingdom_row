@@ -153,6 +153,13 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_BOOT_JARS += qcmediaplayer
 
+# NFC
+PRODUCT_PACKAGES += \
+    com.android.nfc_extras \
+    NfcNci \
+    nfc_nci.pn54x.msm8974 \
+    Tag
+
 # Power
 PRODUCT_PACKAGES += \
     power.msm8974
