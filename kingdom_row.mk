@@ -105,6 +105,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gps.msm8974
 
+# FM radio
+PRODUCT_PACKAGES += \
+    qcom.fmradio \
+    libqcomfm_jni \
+    FM2 \
+    FMRecord
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf \
     $(LOCAL_PATH)/gps/izat.conf:system/etc/izat.conf \
