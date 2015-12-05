@@ -157,6 +157,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_BOOT_JARS += qcmediaplayer
 
 # NFC
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    $(LOCAL_PATH)/configs/nfcee_access.conf:system/etc/nfcee_access.conf
+
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     NfcNci \
