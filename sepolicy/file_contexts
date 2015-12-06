@@ -13,6 +13,9 @@
 
 /dev/tfa9890                                          u:object_r:audio_device:s0
 
+/dev/pn547                                            u:object_r:nfc_device:s0
+/dev/bcm2079x                                         u:object_r:nfc_device:s0
+
 /sys/devices/virtual/touch/tp_dev/0dbutton            u:object_r:touchpanel_sysfs:s0
 /sys/devices/gpio_keys.84/disabled_keys               u:object_r:touchpanel_sysfs:s0
 
