@@ -149,6 +149,7 @@ TARGET_PROVIDES_LIBLIGHT := true
 
 # NFC
 BOARD_NFC_CHIPSET := pn547
+BOARD_NFC_DEVICE := /dev/pn547
 
 # No old RPC for prop
 TARGET_NO_RPC := true
