@@ -184,7 +184,7 @@
 /dev/nfc-nci              0660    nfc         nfc
 /dev/assd                 0660    nfc         nfc
 
-/sys/devices/virtual/touch/tp_dev/0dbutton 0660   system     system
+/sys/devices/virtual/touch/tp_dev/0dbutton 0664   system     system
 
 # UIO devices
 /dev/uio0                 0660   system     system

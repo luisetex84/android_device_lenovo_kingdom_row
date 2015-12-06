@@ -172,9 +172,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
 
 PRODUCT_PACKAGES += \
+    nfc_nci.pn54x.default \
     com.android.nfc_extras \
     NfcNci \
-    nfc_nci.bcm2079x.default \
     Tag
 
 # Power
