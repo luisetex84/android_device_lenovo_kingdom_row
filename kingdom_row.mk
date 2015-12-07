@@ -31,6 +31,7 @@ PRODUCT_CHARACTERISTICS := nosdcard
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.qcom.bt.sh \
+    init.qcom.fm.sh \
     init.qcom-common.rc \
     ueventd.qcom.rc \
     fstab.qcom \
