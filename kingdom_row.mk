@@ -91,7 +91,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.bacon
+    camera.msm8974
 
 # Charger
 PRODUCT_PACKAGES += \
