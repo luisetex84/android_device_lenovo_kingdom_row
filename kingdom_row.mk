@@ -114,12 +114,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gps.msm8974
 
-# FM radio
+# FM
 PRODUCT_PACKAGES += \
-    qcom.fmradio \
-    libqcomfm_jni \
     FM2 \
-    FMRecord
+    FMRecord \
+    libqcomfm_jni \
+    qcom.fmradio
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf \
