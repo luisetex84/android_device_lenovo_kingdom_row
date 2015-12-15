@@ -183,6 +183,10 @@ on boot
     chown root system /sys/devices/virtual/touch/tp_dev/0dbutton
     chmod 0660 /sys/devices/virtual/touch/tp_dev/0dbutton
 
+    # HighTouchSensitivity
+    chown root system /sys/devices/virtual/touch/tp_dev/glove_on
+    chmod 0660 /sys/devices/virtual/touch/tp_dev/glove_on
+
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/media 0770 media_rw media_rw
