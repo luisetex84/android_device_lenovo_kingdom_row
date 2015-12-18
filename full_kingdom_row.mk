@@ -18,12 +18,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from kingdom_row device
 $(call inherit-product, device/lenovo/kingdom_row/device.mk)
 
-# Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
-
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
-
 PRODUCT_NAME := cm_kingdom_row
 PRODUCT_DEVICE := kingdom_row
 PRODUCT_MANUFACTURER := Lenovo
