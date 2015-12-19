@@ -1,3 +1,2 @@
-allow sensors persist_file:file { append create getattr ioctl link lock open read rename setattr unlink write };
-allow sensors persist_file:dir { getattr ioctl open read search add_name create link remove_name rename reparent rmdir setattr unlink write };
-allow sensors sysfs:file { getattr ioctl lock open read append write };
+allow sensors persist_file:dir { search write create add_name };
+allow sensors persist_file:file { create rw_file_perms setattr };

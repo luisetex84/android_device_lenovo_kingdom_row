@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2015 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 # limitations under the License.
 #
 
+# TODO: shouldn't be here
 BOARD_VENDOR := lenovo
 
-# Include path
-TARGET_SPECIFIC_HEADER_PATH := device/lenovo/kingdom_row/include
+#Include path
+TARGET_SPECIFIC_HEADER_PATH += device/lenovo/kingdom_row/include
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8974
@@ -34,64 +35,40 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := krait
-TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
-
-# Assertions
-TARGET_BOARD_INFO_FILE ?= device/lenovo/kingdom_row/board-info.txt
+TARGET_CPU_SMP := true
+ARCH_ARM_HAVE_TLS_REGISTER := true
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := device/lenovo/kingdom_row/mkbootimg.mk
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
+BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
+BOARD_RAMDISK_OFFSET := 0x02000000
 BOARD_KERNEL_SEPARATED_DT := true
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-TARGET_KERNEL_CONFIG := kingdom_row_defconfig
-TARGET_KERNEL_SOURCE := kernel/lenovo/msm8974
 TARGET_KERNEL_ARCH := arm
-BOARD_KERNEL_CMDLINE := console=tty60,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3b7 ehci-hcd.park=3 vmalloc=480M androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=tty60,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3b7 ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 vmalloc=480M
+TARGET_KERNEL_SOURCE := kernel/lenovo/msm8974
+TARGET_KERNEL_CONFIG := cyanogenmod_kingdom_row_defconfig
 
 # Enable DIAG on debug builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
 TARGET_KERNEL_ADDITIONAL_CONFIG:= cyanogenmod_debug_config
 endif
 
-# Flags
-COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD -DUSE_RIL_VERSION_10
-COMMON_GLOBAL_CPPFLAGS += -DNO_SECURE_DISCARD -DUSE_RIL_VERSION_10
 
-# QCOM hardware
+# QCOM
 BOARD_USES_QCOM_HARDWARE := true
-BOARD_USES_QC_TIME_SERVICES := true
-TARGET_USES_QCOM_BSP := true
-TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
-BOARD_SUPPORTS_SOUND_TRIGGER := false
-
-AUDIO_FEATURE_ENABLED_EXTERNAL_SPEAKER := true
-AUDIO_FEATURE_ENABLED_HWDEP_CAL := true
-AUDIO_FEATURE_ENABLED_USBAUDIO := true
-
-AUDIO_FEATURE_ENABLED_ACDB_LICENSE := true
-AUDIO_FEATURE_ENABLED_COMPRESS_CAPTURE := true
-AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := true
-AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := true
-AUDIO_FEATURE_ENABLED_EXTN_FORMATS := true
-#AUDIO_FEATURE_ENABLED_FLAC_OFFLOAD := true
-AUDIO_FEATURE_ENABLED_FLUENCE := true
-QCOM_FM_ENABLED := true
-AUDIO_FEATURE_ENABLED_FM := true
-AUDIO_FEATURE_ENABLED_HFP := true
-AUDIO_FEATURE_ENABLED_INCALL_MUSIC := true
-AUDIO_FEATURE_ENABLED_KPI_OPTIMIZE := true
-AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
-AUDIO_FEATURE_ENABLED_LOW_LATENCY_CAPTURE := true
-AUDIO_FEATURE_ENABLED_INCALL_MUSIC := true
 AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
-AUDIO_FEATURE_ENABLED_PCM_OFFLOAD := true
-AUDIO_FEATURE_ENABLED_PCM_OFFLOAD_24 := true
-AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
+AUDIO_FEATURE_ENABLED_HWDEP_CAL := true
+AUDIO_FEATURE_ENABLED_LOW_LATENCY_CAPTURE := true
+AUDIO_FEATURE_ENABLED_FM := true
+
+# Enable QCOM FM feature
+QCOM_FM_ENABLED := true
+BOARD_USES_SEPERATED_FM := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -100,22 +77,26 @@ QCOM_BT_USE_SMD_TTY := true
 BLUETOOTH_HCI_USE_MCT := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lenovo/kingdom_row/bluetooth
 
+# Camera
+TARGET_USE_VENDOR_CAMERA_EXT := true
+USE_DEVICE_SPECIFIC_CAMERA := true
+
 # Charger
-BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # CM Hardware
 BOARD_HARDWARE_CLASS += device/lenovo/kingdom_row/cmhw
 
-# MSM Init
-TARGET_INIT_VENDOR_LIB := libinit_msm_lenovo
-
-# QCOM Power
-TARGET_POWERHAL_VARIANT := qcom
-
-# Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_lenovo
-TARGET_RELEASETOOLS_EXTENSIONS := device/lenovo/kingdom_row
-
+# Filesystem
+BOARD_BOOTIMAGE_PARTITION_SIZE     := 20971520
+BOARD_CACHEIMAGE_PARTITION_SIZE    := 134217728
+BOARD_PERSISTIMAGE_PARTITION_SIZE  := 33554432
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 20971520
+BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 2147483648
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 12815659008
+BOARD_USERDATAEXTRAIMAGE_PARTITION_SIZE := 59718467072
+BOARD_USERDATAEXTRAIMAGE_PARTITION_NAME := 64G
+BOARD_OEMIMAGE_PARTITION_SIZE      := 133169152
 
 # Graphics
 BOARD_EGL_CFG := device/lenovo/kingdom_row/configs/egl.cfg
@@ -138,9 +119,6 @@ MAX_EGL_CACHE_KEY_SIZE := 12*1024
 # of the device.
 MAX_EGL_CACHE_SIZE := 2048*1024
 
-# Lights
-TARGET_PROVIDES_LIBLIGHT := true
-
 # Wifi
 BOARD_HAS_QCOM_WLAN              := true
 BOARD_HAS_QCOM_WLAN_SDK          := true
@@ -156,23 +134,23 @@ TARGET_USES_WCNSS_CTRL           := true
 TARGET_USES_QCOM_WCNSS_QMI       := true
 TARGET_USES_WCNSS_MAC_ADDR_REV   := true
 
-# Camera
-USE_DEVICE_SPECIFIC_CAMERA := true
-COMMON_GLOBAL_CFLAGS += -DOPPO_CAMERA_HARDWARE
+# Wifi - EAP-SIM
+CONFIG_EAP_PROXY                 := qmi
+CONFIG_EAP_PROXY_DUAL_SIM        := true
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PERSISTIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_BOOTIMAGE_PARTITION_SIZE          := 20971520
-BOARD_RECOVERYIMAGE_PARTITION_SIZE      := 20971520
-BOARD_PERSISTIMAGE_PARTITION_SIZE       := 33554432
-BOARD_SYSTEMIMAGE_PARTITION_SIZE        := 2147483648
-BOARD_CACHEIMAGE_PARTITION_SIZE         := 131072000
-BOARD_USERDATAIMAGE_PARTITION_SIZE      := 27439087000
-BOARD_USERDATAEXTRAIMAGE_PARTITION_SIZE := 29957396480
-BOARD_USERDATAEXTRAIMAGE_PARTITION_NAME := 64G
-BOARD_FLASH_BLOCK_SIZE                  := 131072
+BOARD_OEMIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_FLASH_BLOCK_SIZE := 131072
+
+# Lights
+TARGET_PROVIDES_LIBLIGHT := true
+
+# NFC
+BOARD_NFC_CHIPSET := pn547
+BOARD_NFC_DEVICE := /dev/pn547
 
 # No old RPC for prop
 TARGET_NO_RPC := true
@@ -184,22 +162,24 @@ TARGET_PROVIDES_GPS_LOC_API := true
 # QCRIL
 TARGET_RIL_VARIANT := caf
 
+# Recovery
+TARGET_RECOVERY_FSTAB := device/lenovo/kingdom_row/rootdir/etc/fstab.qcom
+
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := device/lenovo/kingdom_row
+
 # Use HW crypto for ODE
 TARGET_HW_DISK_ENCRYPTION := true
 
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
 
-# ANT+
+# ANT+ - TODO: Confirm this - TODO: Confirm this - TODO: Confirm this - TODO: Confirm this
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
 
-# Enable transparent compression in the build
-# TARGET_TRANSPARENT_COMPRESSION_METHOD := lz4
-
-# Enable dexpreopt to speed boot time
 ifeq ($(HOST_OS),linux)
   ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
     ifeq ($(WITH_DEXPREOPT),)
@@ -207,31 +187,6 @@ ifeq ($(HOST_OS),linux)
     endif
   endif
 endif
-
-# Recovery
-RECOVERY_FSTAB_VERSION := 2
-TARGET_RECOVERY_FSTAB := device/lenovo/kingdom_row/rootdir/system/etc/recovery.fstab
-#PRODUCT_COPY_FILES += device/lenovo/kingdom_row/rootdir/system/etc/recovery.fstab:recovery/root/etc/twrp.fstab
-TARGET_RECOVERY_INITRC := recovery/init.rc
-DEVICE_RESOLUTION := 1440x2560
-BOARD_HAS_NO_REAL_SDCARD := true
-TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
-
-TARGET_OTA_ASSERT_DEVICE := kingdom_row,K920
-
-TARGET_INIT_VENDOR_LIB := libinit_msm_lenovo
-
-TARGET_WCNSS_MAC_PREFIX := e8bba8
-
-# Workaround for factory issue
-BOARD_VOLD_CRYPTFS_MIGRATE := true
-
-#NFC
-#BOARD_NFC_CHIPSET := pn547
-#BOARD_NFC_HAL_SUFFIX := $(TARGET_BOARD_PLATFORM)
-
-AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
-AUDIO_FEATURE_ENABLED_LOW_LATENCY_CAPTURE := true
 
 # inherit from the proprietary version
 ifneq ($(QCPATH),)
@@ -247,6 +202,6 @@ endif
 include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
-        device/lenovo/kingdom_row/sepolicy
+    device/lenovo/kingdom_row/sepolicy
 
 -include vendor/lenovo/kingdom_row/BoardConfigVendor.mk

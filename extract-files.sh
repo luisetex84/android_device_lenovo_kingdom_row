@@ -1,42 +1,19 @@
 #!/bin/sh
 
-set -e
+VENDOR=lenovo
+DEVICE=kingdom_row
+PROPRIETARY_FILES=proprietary-files*.txt
 
-function extract() {
-    for FILE in `egrep -v '(^#|^$)' $1`; do
-        OLDIFS=$IFS IFS=":" PARSING_ARRAY=($FILE) IFS=$OLDIFS
-        FILE=`echo ${PARSING_ARRAY[0]} | sed -e "s/^-//g"`
-        DEST=${PARSING_ARRAY[1]}
-        if [ -z $DEST ]; then
-            DEST=$FILE
-        fi
-        DIR=`dirname $FILE`
-        if [ ! -d $2/$DIR ]; then
-            mkdir -p $2/$DIR
-        fi
-        # Try CM target first
-        adb pull /system/$DEST $2/$DEST
-        # if file does not exist try OEM target
-        if [ "$?" != "0" ]; then
-            adb pull /system/$FILE $2/$DEST
-        fi
-    done
-}
-
-BASE=../../../vendor/lenovo/msm8974-common/proprietary
+BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 rm -rf $BASE/*
 
-DEVBASE=../../../vendor/$VENDOR/$DEVICE/proprietary
-rm -rf $DEVBASE/*
+for FILE in `cat $PROPRIETARY_FILES | grep -v ^# | grep -v ^$ `; do
+    FILE=$(echo $FILE | sed -e 's|^-||g' | sed -e 's|^+||g')
+    DIR=`dirname $FILE`
+    if [ ! -d $BASE/$DIR ]; then
+        mkdir -p $BASE/$DIR
+    fi
+    adb pull /system/$FILE $BASE/$FILE
+done
 
-extract ../../lenovo/kingdom_row/proprietary-files-qc.txt $BASE
-extract ../../lenovo/kingdom_row/proprietary-files.txt $DEVBASE
-extract ../../$VENDOR/$DEVICE/device-proprietary-files.txt $DEVBASE
-
-#Use Traditional sorting
-export LC_ALL=C
-
-FP=$(cd ${0%/*} && pwd -P)
-export VENDOR=$(basename $(dirname $FP))
-export DEVICE=$(basename $FP)
-./../../lenovo/kingdom_row/extract-files.sh $@
+./setup-makefiles.sh

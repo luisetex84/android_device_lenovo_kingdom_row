@@ -1,1 +1,0 @@
-allow netd netd:capability { chown dac_override fowner kill net_admin net_raw setgid setuid fsetid };

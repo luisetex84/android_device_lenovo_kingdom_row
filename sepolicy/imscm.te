@@ -1,1 +1,0 @@
-allow imscm devpts:chr_file { append getattr ioctl lock open read write };

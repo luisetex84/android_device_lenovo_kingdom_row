@@ -27,7 +27,7 @@ import java.io.File;
  */
 public class ColorEnhancement {
 
-    private static String FILE_CE = "/sys/class/graphics/fb0/color_enhance";
+    private static String FILE_CE = "/sys/class/graphics/fb0/ce";
 
     /**
      * Whether device supports CE

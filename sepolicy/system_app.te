@@ -1,7 +1,8 @@
-allow system_app proc_touchpanel:dir search;
-allow system_app proc_touchpanel:file rw_file_perms;
+allow system_app touchpanel_sysfs:dir search;
+allow system_app touchpanel_sysfs:file rw_file_perms;
 
-allow system_app uhid_device:chr_file { append getattr ioctl lock open read write };
-allow system_app sensors_device:chr_file { getattr append ioctl lock open read write };
-allow system_app sensors_socket:sock_file { write append getattr ioctl lock open read };
-allow system_app sysfs_socinfo:file { getattr ioctl lock open read write };
+allow system_app persist_file:dir search;
+allow system_app sensors_device:chr_file getattr;
+allow system_app sensors:unix_stream_socket connectto;
+allow system_app sensors_socket:sock_file { read write };
+allow system_app sensors_persist_file:file r_file_perms;
