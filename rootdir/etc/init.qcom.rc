@@ -253,6 +253,13 @@ on post-fs-data
 
     mkdir /data/audio/ 0770 media audio
 
+    chown system system /sys/class/timed_output/vibrator/vtg_level
+    chown system system /sys/class/timed_output/vibrator/vtg_max
+    chown system system /sys/class/timed_output/vibrator/vtg_min
+    chmod 0644 /sys/class/timed_output/vibrator/vtg_level
+    chmod 0644 /sys/class/timed_output/vibrator/vtg_max
+    chmod 0644 /sys/class/timed_output/vibrator/vtg_min
+
     # Touchscreen
     chown system system /sys/devices/virtual/touch/tp_dev/gesture_on
     chmod 0660 /sys/devices/virtual/touch/tp_dev/gesture_on
