@@ -1,5 +1,5 @@
 #!/system/bin/sh
-# Copyright (c) 2009-2015, The Linux Foundation. All rights reserved.
+# Copyright (c) 2009-2016, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -28,8 +28,7 @@
 
 setprop hw.fm.init 0
 
-# set false if using radio-iris-transport.ko module
-inbuilt=true
+module="/system/lib/modules/radio-iris-transport.ko"
 
 mode=`getprop hw.fm.mode`
 version=`getprop hw.fm.version`
@@ -69,11 +68,11 @@ case $mode in
   "normal")
     case $TRANSPORT in
     "smd")
-        if [ "$inbuilt" = true ]; then
-           logi "smd transport case - inbuilt"
-        else
+        if [ -f "$module" ]; then
            logi "inserting the radio transport module"
-           insmod /system/lib/modules/radio-iris-transport.ko
+           insmod $module
+        else
+           logi "smd transport case - inbuilt"
         fi
      ;;
      *)
