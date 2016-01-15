@@ -33,6 +33,7 @@ on init
     export EXTERNAL_STORAGE /storage/emulated/legacy
     export EMULATED_STORAGE_SOURCE /mnt/shell/emulated
     export EMULATED_STORAGE_TARGET /storage/emulated
+    export SECONDARY_STORAGE /storage/usbdisk
 
     # Support legacy paths
     symlink /storage/emulated/legacy /sdcard
@@ -466,10 +467,8 @@ service qseecomd /system/bin/qseecomd
     user root
     group root
 
-service charger /sbin/healthd -c
+service charger /charger
     class charger
-    critical
-    seclabel u:r:healthd:s0
 
 service hvdcp /system/bin/hvdcp
     class core
