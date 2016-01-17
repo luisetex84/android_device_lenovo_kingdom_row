@@ -1,10 +1,7 @@
 [
   {
-    "repository": "android_device_qcom_common",
-    "target_path": "device/qcom/common"
-  },
-  {
-    "repository": "android_kernel_cyanogen_msm8974",
-    "target_path": "kernel/cyanogen/msm8974"
+    "repository": "frantisheq/android_device_lenovo_common",
+    "target_path": "device/lenovo/common",
+    "branch": "cyanogenmod-cm-12.1"
   }
 ]
