@@ -87,11 +87,12 @@ vendor/etc/qcril.db
 
 # TFA9890
 etc/tfa98xx/TFA9890_N1B12_N1C3_v2.config
-etc/tfa98xx/TFA9890_N1C3_2_1_1.patch
+#etc/tfa98xx/TFA9890_N1C3_2_1_1.patch
+etc/tfa98xx/TFA9890_N1C3_1_7_1.patch
 etc/tfa98xx/coldboot.patch
-etc/tfa98xx/shenqi.speaker
-etc/tfa98xx/shenqi_music.eq
-etc/tfa98xx/shenqi_music.preset
-etc/tfa98xx/shenqi_speech.eq
-etc/tfa98xx/shenqi_speech.preset
+#etc/tfa98xx/shenqi.speaker
+#etc/tfa98xx/shenqi_music.eq
+#etc/tfa98xx/shenqi_music.preset
+#etc/tfa98xx/shenqi_speech.eq
+#etc/tfa98xx/shenqi_speech.preset
 vendor/lib/libtfa98xx.so
